@@ -123,7 +123,7 @@ class Img2Vec():
                 layer = model._modules.get(layer)
             return model, layer
         elif model_name == 'resnet-18':
-            model = models.resnet18(pretrained=True)
+            model = models.quantization.resnet18(pretrained=True)
             if layer == 'default':
                 layer = model._modules.get('avgpool')
                 self.layer_output_size = 512
